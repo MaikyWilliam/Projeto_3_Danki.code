@@ -33,6 +33,10 @@ header nav{
     float: right;
 }
 
+nav.mobile-menu{
+    display: none;
+}
+
 header .logo{
     float: left;
     width: 160px;
@@ -40,16 +44,16 @@ header .logo{
     background-color: #ccc;
 }
 
-header nav ul{
+header nav.desktop-menu ul{
     list-style-type: none;
 }
 
-header nav li{
+header nav.desktop-menu li{
     float: left;
     padding: 0 20px;
 }
 
-header li a{
+header nav.desktop-menu li a{
     text-decoration: none;
     color: white;
 
@@ -77,6 +81,7 @@ section.sessao1{
     width: 100%;
     background-color: #472552;
     padding: 0 2%;
+    height: 400px;
 }
 
 section.sessao1 .container{
@@ -86,26 +91,32 @@ section.sessao1 .container{
 .texto-sessao1{
     float: left;
     width: 50%;
+    position: relative;
+    left: 70px;
+    margin-top: 60px;
+    padding-left: 80px;
     color: white;
 }
 
 .texto-sessao1 h2{
     font-weight: 300;
+    font-size: 26px;
 }
 
 .texto-sessao1 p{
-    font-size: 13px;
+    font-size: 15px;
     margin-top: 20px;
 }
 
 .texto-sessao1 ul{
-    font-size: 13px;
+    font-size: 15px;
     list-style-position: inside;
 }
 
 .texto-sessao1 ul li{
     float: left;
     width: 100%;
+    margin-top: 8px;
 }
 
 .btn1-texto{
@@ -114,17 +125,65 @@ section.sessao1 .container{
     height: 44px;
     color: white;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     line-height: 44px;
     border-radius: 30px;
+    font-size: 13px;
 }
 
 .device-sessao1{
     float: left;
     width: 50%;
-    height: 400px;
+    position: relative;
+    top: -30px;
+    height: 430px;
     background-image: url(../imagens/device.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav.desktop-menu{
+        display: none;
+    }
+
+    nav.mobile-menu{
+        display: block;
+    }
+
+    section.sessao1{
+        padding: 40px 2%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .texto-sessao1{
+        width: 100%;
+        margin-top: 0;
+        padding-left: 0;
+        position: static;
+        float: none;
+        display: inline-block;
+    }
+
+    .texto-sessao1 ul{
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .texto-sessao1 ul li{
+        float: none;
+        text-align: left;
+
+    }
+
+    .btn1-texto{
+        display: inline-block;
+    }
+
+    .device-sessao1{
+        display: none;
+    }
 }
