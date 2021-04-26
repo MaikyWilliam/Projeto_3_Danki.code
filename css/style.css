@@ -34,7 +34,42 @@ header nav{
 }
 
 nav.mobile-menu{
+    cursor: pointer;
     display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url('../imagens/menu.png');
+    background-size: 100% 100%;
+}
+
+nav.mobile-menu:hover ul{
+    opacity: 1;
+}
+
+nav.mobile-menu ul{
+    opacity: 0;
+    transition: 1s;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav.mobile-menu ul li{
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+nav.mobile-menu ul li:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+nav.mobile-menu ul li a{
+    color: black;
+    text-decoration: none;
 }
 
 header .logo{
@@ -144,13 +179,40 @@ section.sessao1 .container{
 }
 
 @media screen and (max-width: 768px) {
-    
+    header{
+        width: 100%;
+        height: auto;
+        padding: 40px 2%;
+        min-height: 90vh;
+    }
+
     nav.desktop-menu{
         display: none;
     }
 
     nav.mobile-menu{
         display: block;
+    }
+
+    .chamada1{
+        float: none;
+        margin: 100px 0;
+        max-width: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .chamada1 h2{
+        font-size: 30px;
+        color: white;
+        font-weight: 300;
+        padding: 0 10px;
+    }
+    
+    .chamada1 p{
+        font-size: 15px;
+        color: white;
+        margin-top: 10px;
     }
 
     section.sessao1{
